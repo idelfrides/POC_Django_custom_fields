@@ -33,15 +33,12 @@ class NameField(models.CharField):
                      "Full name value must be string." ) 
     }
     
-    description = _("Enter your name")
 
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 21)
         super().__init__(*args, **kwargs)
 
     def to_python(self, value):
-        # import pdb
-        # pdb.set_trace()
         try:                
             value_int = int(value)  
         except ValueError:
@@ -65,8 +62,6 @@ class RoleField(models.CharField):
         kwargs.setdefault('max_length', 50)
         kwargs.setdefault('choices', ROLE_CHOICES)
         super().__init__(*args, **kwargs)
-    
-    # description = _('Select your role')
 
     def to_python(self, value):   
         return super().to_python(value)          
@@ -94,8 +89,6 @@ class CompanyField(models.CharField):
         super().__init__(*args, **kwargs)
 
     def to_python(self, value):
-        # import pdb
-        # pdb.set_trace()
         try:                
             value_int = int(value)  
         except ValueError:

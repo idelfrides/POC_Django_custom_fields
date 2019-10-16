@@ -33,19 +33,19 @@ class NameField(models.CharField):
                      "Full name value must be string." ) 
     }
     
-
     def __init__(self, *args, **kwargs):
         kwargs.setdefault('max_length', 21)
         super().__init__(*args, **kwargs)
 
     def to_python(self, value):
         try:                
-            value_int = int(value)  
+            value = int(value)  
         except ValueError:
-            # print('\n\n valid')                 # is alpha
-            return value                                
+            # is alpha
+            print('\n\n Dev name upper --> {}'.format(value.upper()))
+            return value.upper()                                
         else: 
-            print('\n\n invalid ', value_int)   # is numeric
+            # is numeric
             raise ValidationError(_('Full name value must be a string .'))   
         finally:
             pass

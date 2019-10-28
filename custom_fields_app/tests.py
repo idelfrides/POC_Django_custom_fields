@@ -21,5 +21,5 @@ class DeveloperTestCase(TestCase):
         idel = Developer.objects.get(full_name='idel')
         self.assertEqual(idel.full_name, 'IDEL', msg='Test if this dev exists')
         
-        man_obj = Manager()
-        man_obj.show_date_hour()
+        manager_obj = Manager()
+        manager_obj.show_date_hour()

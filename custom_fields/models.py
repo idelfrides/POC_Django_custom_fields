@@ -2,7 +2,6 @@ from django.db import models
 from django.core.exceptions import ValidationError
 from django.core.validators import MaxLengthValidator
 from django.utils.translation import gettext_lazy as _
-
 from . import forms
 
 
@@ -19,7 +18,6 @@ GENDER_CHOICES = [
     ('MALE', 'Male'),
     ('FEMALE', 'Female')
 ]
-
 
 class NameField(models.CharField):
     """Custom dev name field """
@@ -117,3 +115,4 @@ class GenderField(models.CharField):
 
     def formfield(self, **kwargs):
         return super().formfield(**kwargs)
+    

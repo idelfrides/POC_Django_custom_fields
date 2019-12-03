@@ -27,7 +27,7 @@ class NameField(forms.CharField):
 
 class CompanyField(forms.CharField):
     widget = forms.TextInput(
-        attrs={"placeholder": "Enter your name"}
+        attrs={"placeholder": "Enter your company name"}
     )
     
     default_validators = [

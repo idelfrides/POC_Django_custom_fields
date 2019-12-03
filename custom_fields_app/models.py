@@ -4,7 +4,7 @@ from custom_fields.models import NameField, RoleField
 from custom_fields.models import GenderField, CompanyField
 
 
-class Developer(models.Model):    
+class Developer(models.Model):
     full_name = NameField()
     role = RoleField()
     company = CompanyField()

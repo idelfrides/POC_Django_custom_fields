@@ -1,5 +1,5 @@
 from django.test import TestCase
-from .models import Developer
+from custom_fields_app.models import Developer
 from .managers import Manager
 
 

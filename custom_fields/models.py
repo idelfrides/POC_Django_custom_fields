@@ -40,11 +40,15 @@ class NameField(models.CharField):
             value = int(value)  
         except ValueError:
             # is alpha
-            print('\n\n Dev name upper --> {}'.format(value.upper()))
+            print('\n\n Dev name upper --> {}'
+                .format(value.upper())
+            )
             return value.upper()                                
         else: 
             # is numeric
-            raise ValidationError(_('Full name value must be a string .'))   
+            raise ValidationError(
+                _('Full name value must be a string .')
+            )   
         finally:
             pass
 
@@ -115,4 +119,5 @@ class GenderField(models.CharField):
 
     def formfield(self, **kwargs):
         return super().formfield(**kwargs)
+    
     

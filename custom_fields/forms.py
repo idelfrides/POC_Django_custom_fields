@@ -45,3 +45,4 @@ class CompanyField(forms.CharField):
             'placeholder': "Enter your company full name",
         })
         return attrs
+    

@@ -4,8 +4,8 @@ from django.views.generic.base import TemplateView
 
 class HomePageView(TemplateView):
     """ Template views """
-    template_name='home.html'
-    # man_obj = m.Manager()
+    
+    template_name = 'home.html'
 
     def get_context_data(self, **kwargs):      
         context = super().get_context_data(**kwargs)

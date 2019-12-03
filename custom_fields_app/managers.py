@@ -1,6 +1,7 @@
 """ Manager """
 
 import time
+from textwrap import dedent
 
 
 class Manager(object):
@@ -16,12 +17,12 @@ class Manager(object):
             "%a, %d %b %Y  |  TIME: %H:%M:%S +0000", 
             time.gmtime(epoch)
         )
-        print("""
-            ----------------------------------
+        print('*'*60)
+        print(dedent(""" 
                TODAY: {}
-            ---------------------------------- 
-            """.format(today)
+            """.format(today))
         )
+        print('*'*60)
 
 
 

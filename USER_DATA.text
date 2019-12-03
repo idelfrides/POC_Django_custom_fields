@@ -1,7 +1,0 @@
-
-SUPERUSER DATA:
-
-USER: cfieldsadmin
-PWD: dj123pwd
-
-createsuperuser --email customf@admin.com --username cfieldsadmin 

@@ -17,8 +17,11 @@ from django.contrib import admin
 from django.urls import path, include
 from custom_fields_app.views import HomePageView
 
+
 urlpatterns = [
     path('grappelli/', include('grappelli.urls')),
     path('admin/', admin.site.urls),
-    path('', HomePageView.as_view(template_name='home.html')),
+    path('', 
+        HomePageView.as_view(template_name='home.html')
+    ),
 ]
